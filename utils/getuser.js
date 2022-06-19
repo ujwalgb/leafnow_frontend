@@ -3,7 +3,7 @@ import jsCookies from "js-cookies";
 
 async function fetchUserInfo() {
   try {
-    const r = await axios.get("http://localhost:5000/api/auth/me", {
+    const r = await axios.get("https://leafnowshop.herokuapp.com/api/auth/me", {
       headers: {
         Authorization: `${jsCookies.getItem("token")}`,
       },
