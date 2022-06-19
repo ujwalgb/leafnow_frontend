@@ -19,25 +19,25 @@ function Home({ setUser }) {
     {
       id: 1,
       name: "product 1",
-      image: "/arrival1.png",
+      image: "https://leafnow-frontend.vercel.app/arrival1.png",
       price: 10,
     },
     {
       id: 2,
       name: "product 2",
-      image: "/arrival2.png",
+      image: "https://leafnow-frontend.vercel.app/arrival2.png",
       price: 12,
     },
     {
       id: 3,
       name: "product 3",
-      image: "/arrival3.png",
+      image: "https://leafnow-frontend.vercel.app/arrival3.png",
       price: 10,
     },
     {
       id: 4,
       name: "product 4",
-      image: "/arrival4.png",
+      image: "https://leafnow-frontend.vercel.app/arrival4.png",
       price: 12,
     },
   ];
