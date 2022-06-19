@@ -1,0 +1,61 @@
+.arrival_card_thumb {
+  width: 100%;
+  height: 348px;
+  object-fit: cover;
+  background-color: #ebeee3;
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.arrival_card_thumb > img {
+  animation: translateUp 3s ease-in-out infinite;
+}
+
+.arrival_card_thumb:hover .donate_button,
+.arrival_card_thumb:hover .item_add_to_cart_button {
+  opacity: 1;
+}
+.donate_button {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  background-color: #fff;
+  border-radius: 50%;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  z-index: 99;
+}
+
+.item_add_to_cart_button {
+  position: absolute;
+  width: 85%;
+  height: 45px;
+  border: 1px solid;
+  left: 50%;
+  bottom: 15px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+  opacity: 0;
+}
+@keyframes translateUp {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

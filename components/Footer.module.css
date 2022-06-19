@@ -1,0 +1,40 @@
+.footer {
+  padding: 65px 32px;
+  background-color: var(--brand-color);
+}
+
+.footer_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.footer__subscription_form {
+  min-width: 340px;
+  width: 375px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer_wrapper form {
+  min-width: 345px;
+  display: flex;
+  align-items: center;
+  background-color: #d5dbcf;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+.footer_wrapper form input[type="text"] {
+  width: 238px;
+  height: 56px;
+  outline: 0;
+  padding-left: 10px;
+  background-color: transparent;
+}
+.footer_wrapper form input[type="submit"] {
+  width: 132px;
+  height: 56px;
+  background-color: #000;
+  color: #fff;
+}
