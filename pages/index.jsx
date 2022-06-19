@@ -19,26 +19,26 @@ function Home({ setUser }) {
     {
       id: 1,
       name: "product 1",
-      image: "http://localhost:3000/arrival1.png",
-      price: 1,
+      image: "/arrival1.png",
+      price: 10,
     },
     {
-      id: 1,
+      id: 2,
       name: "product 2",
-      image: "http://localhost:3000/arrival2.png",
-      price: 1,
+      image: "/arrival2.png",
+      price: 12,
     },
     {
-      id: 1,
+      id: 3,
       name: "product 3",
-      image: "http://localhost:3000/arrival3.png",
-      price: 1,
+      image: "/arrival3.png",
+      price: 10,
     },
     {
-      id: 1,
+      id: 4,
       name: "product 4",
-      image: "http://localhost:3000/arrival4.png",
-      price: 1,
+      image: "/arrival4.png",
+      price: 12,
     },
   ];
   return (
