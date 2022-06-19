@@ -8,7 +8,10 @@ function useAuth() {
     fetchUserInfo()
       .then((response) => {
         console.log(response);
-        setAuth(response);
+        const { error } = response;
+        if (!error) {
+          setAuth(response);
+        }
       })
       .catch((e) => {
         console.log(e);
