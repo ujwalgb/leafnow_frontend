@@ -11,12 +11,8 @@
   justify-content: space-between;
 }
 
-.header_nav,
-.auth__nav {
-  display: none;
-}
 .menu_btn {
-  display: block;
+  display: none;
 }
 
 .cart_button {
@@ -33,13 +29,4 @@
   position: absolute;
   bottom: -5px;
   right: 0;
-}
-@media screen and (min-width: 768px) {
-  .header_nav,
-  .auth__nav {
-    display: block;
-  }
-  .menu_btn {
-    display: none;
-  }
 }

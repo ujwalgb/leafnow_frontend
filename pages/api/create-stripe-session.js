@@ -5,7 +5,7 @@ async function CreateStripeSession(req, res) {
 
   const redirectURL =
     process.env.NODE_ENV === "development"
-      ? "http://localhost:3000"
+      ? "http://localhost:3000/transaction"
       : "https://leafnow-frontend.vercel.app/";
 
   const transformedItem = {
@@ -17,7 +17,7 @@ async function CreateStripeSession(req, res) {
       },
       unit_amount: item.price * 100,
     },
-    description: "Some desc",
+    description: item.description,
     quantity: 1,
   };
 

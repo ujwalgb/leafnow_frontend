@@ -3,7 +3,7 @@ import styles from "./Header.module.css";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { connect } from "react-redux";
 import Link from "next/link";
-function Header({ user }) {
+function Header({ user, cart, setCartPopup }) {
   console.log(user);
   return (
     <div className={styles.header}>
@@ -11,19 +11,6 @@ function Header({ user }) {
         <a href="#logo">
           <img src="/logo.png" alt="brand-logo" />
         </a>
-        <nav className={styles.header_nav}>
-          <ul className="flex items-center gap-5">
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="#">About</a>
-            </li>
-            <li>
-              <a href="#">Discussion</a>
-            </li>
-          </ul>
-        </nav>
 
         <div className={styles.auth__nav}>
           <ul className="flex items-center gap-5">
@@ -41,9 +28,14 @@ function Header({ user }) {
 
             {user && (
               <li>
-                <button className={styles.cart_button}>
+                <button
+                  className={styles.cart_button}
+                  onClick={() => {
+                    setCartPopup(true);
+                  }}
+                >
                   <img src="/bag.svg" alt="" />
-                  <span className={styles.cart_count}>0</span>
+                  <span className={styles.cart_count}>{cart.length}</span>
                 </button>
               </li>
             )}
@@ -60,6 +52,15 @@ function Header({ user }) {
 
 const mapStateToProps = (state) => ({
   user: state.appReducer.user,
+  cart: state.appReducer.cart,
 });
 
-export default connect(mapStateToProps, null)(Header);
+const mapDispatchToProps = (dispatch) => ({
+  setCartPopup: (cart_popup) =>
+    dispatch({
+      type: "SET_CART_POPUP",
+      cart_popup,
+    }),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

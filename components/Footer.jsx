@@ -12,18 +12,11 @@ function Footer() {
             Sem magna ut pharetra vitae duis eu senectus sem risus. Morbi non,
             semper vestibulum euismod accumsan augue.
           </p>
-
-          <form action="/">
-            <div className="form__control">
-              <input type="text" placeholder="your email address" />
-            </div>
-            <input type="submit" value="SUBSCRIBE" />
-          </form>
         </div>
         <hr />
         <div className="developer_name">
           <p>
-            Developed by <strong>Ujjwal</strong>
+            Developed by <strong>Ujwal</strong>
           </p>
         </div>
       </div>

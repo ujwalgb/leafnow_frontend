@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import Link from "next/link";
 import React from "react";
+import Cookies from "js-cookies";
 import styles from "../styles/Auth.module.css";
 import SignUp from "../utils/signup";
 function FormField(props) {
@@ -46,9 +47,16 @@ function signup() {
     SignUp(email, name, password)
       .then((response) => {
         console.log(response);
-        const { error, message } = response;
+        const { error, message, token } = response;
         if (error) {
           alert(message);
+          return;
+        }
+        if (token) {
+          Cookies.setItem("token", token);
+          setTimeout(() => {
+            window.location.href = "/";
+          }, 3000);
         }
       })
       .catch((e) => console.log(e));

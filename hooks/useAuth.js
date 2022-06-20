@@ -1,7 +1,8 @@
 import React from "react";
+import { connect } from "react-redux";
 import fetchUserInfo from "../utils/getuser";
 
-function useAuth() {
+function useAuth({ setCart }) {
   const [auth, setAuth] = React.useState(null);
 
   React.useEffect(() => {
@@ -11,6 +12,7 @@ function useAuth() {
         const { error } = response;
         if (!error) {
           setAuth(response);
+          setCart(response.cart);
         }
       })
       .catch((e) => {
